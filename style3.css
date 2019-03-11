@@ -1,0 +1,218 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.fullscreen {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* - - - BACKGROUND - - - */
+
+.image-container {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/main-background-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* - - - NAVBAR - - - */
+
+.navbar {
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  height: 70px;
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  text-align: center;
+  line-height: 3.8;  /* align the list in the middle of the navbar (height-wise) */
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  font-family: Overpass, Helvetica, sans-serif;
+  font-size: 1.4em;
+  font-weight: 400;
+  letter-spacing: 0.1vw;
+  line-height: 3;  /* align the logo in the middle of the navbar (height-wise) */
+}
+
+.logo p {
+  margin: 0;  /* remove default margin for <p> element */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.15em;
+  font-weight: 200;
+  text-transform: capitalize;
+  letter-spacing: 0.1vw;
+}
+
+/* - - - WELCOME BOX - - - */
+
+.title {
+  border: 2px solid #000000;
+  border-radius: 15px;  /* curved edges */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  white-space: nowrap;
+  padding: 1.5%;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.title p {
+  margin: 0;  /* remove default margin from <p> element */
+}
+
+.main-title {
+  font-weight: 200;
+  font-size: 3em;
+  letter-spacing: 0.1vw;
+  padding: 1%;
+}
+
+.sub-title {
+  border-top: 1px solid #000000;
+  font-size: 2em;
+  letter-spacing: 0.1vw;
+  padding: 1%;
+  font-weight: lighter;
+}
+
+/* - - - SCROLL-DOWN ARROW - - - */
+
+.arrow {
+  min-height: 30px;
+  min-width: 30px;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../images/upside-down-triangle.png");
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 915px) {
+  .navbar {
+    line-height: 4.4;
+  }
+
+  .main-title {
+    font-size: 2em;
+  }
+
+  .sub-title {
+    font-size: 1.5em;
+  }
+
+  .navbar a {
+    font-size: 1em;
+  }
+}
+
+  /* add hamburger menu here /*
+}
+
+/* @ media max-width: 800px --> hamburger icon for navbar + change title font size to something smaller again */
+
+@media only screen and (max-width: 740px) {
+  .image-container {
+    background-image: url("../images/main-img-small(2).jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .main-title {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 200;
+  }
+
+  .main-title p {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 7vw;
+    letter-spacing: 0.1vw;
+  }
+
+  .sub-title {
+    position: absolute;
+    top: auto;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 100;
+  }
+
+  .sub-title p {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 4vw;
+    letter-spacing: 0.1vw;
+  }
+
+  .title {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-template-columns: 1fr;
+    text-align: center;
+    white-space: nowrap;
+    padding: 1.5%;
+  }
+
+  .title p {
+    margin: 0;
+    font-family: "Helvetica Neue", sans-serif;
+  }
+
+  .main-title {
+    display: block;
+    font-weight: 200;
+    font-size: 3em;
+    letter-spacing: 0.1vw;
+    padding: 1%;
+    top: 39%;
+  }
+
+  .sub-title {
+    bottom: 1%;
+    border-top: 1px solid #FFFFFF;
+    font-size: 1em;
+    letter-spacing: 0.1vw;
+    padding: 1%;
+  }
+
+  .arrow {
+    min-height: 30px;
+    min-width: 30px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../images/upsidedown_triangle_white.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
